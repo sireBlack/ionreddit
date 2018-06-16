@@ -8,12 +8,12 @@ export class RedditService{
     http: any;
     baseUrl: String;
 
-    constructor (http: Http){
+    constructor (http: HttpClient){
         this.http = http;
         this.baseUrl = 'https://www.reddit.com/r';
     }
 
     getPosts(category, limit){
-        return this.http.get(this.baseUrl+'/'+category+'/top.json?limit='+limit).map(res => res.json());
+        return this.http.get(this.baseUrl+'/'+category+'/top.json?limit='+limit);
     }
 }
