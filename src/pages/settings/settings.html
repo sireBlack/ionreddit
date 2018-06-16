@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="primary">
+    <ion-navbar color="reddit">
       <ion-title>
         Settings
       </ion-title>
@@ -7,10 +7,10 @@
   </ion-header>
   
   <ion-content padding>
-    <form (submit)="setDefaults()">
+    <form (submit)="setDefaults()" style="margin-top: 30px;">
       <ion-list>
-        <ion-item>
-          <ion-label fixed>Category</ion-label>
+        <ion-item style="margin-bottom: 20px;">
+          <ion-label>Default Category</ion-label>
           <ion-select (ion-change)="changeCategory()" [(ngModel)]="category" name="category">
             <ion-option value="sports">Sports</ion-option>
             <ion-option value="food">Food</ion-option>
@@ -21,8 +21,8 @@
           </ion-select>
         </ion-item>
 
-        <ion-item>
-            <ion-label fixed>Limit</ion-label>
+        <ion-item style="margin-bottom: 20px;">
+            <ion-label>Default Limit</ion-label>
             <ion-select [(ngModel)]="limit" name="limit">
               <ion-option value="5">5</ion-option>
               <ion-option value="10">10</ion-option>
@@ -31,7 +31,7 @@
               <ion-option value="25">25</ion-option>
             </ion-select>
           </ion-item>
-          <button block ion-button type="submit">SAVE CHANGES</button>
+          <button block ion-button type="submit" style="margin-top: 30px;" color="reddit">SAVE CHANGES</button>
       </ion-list>
     </form>
     </ion-content>

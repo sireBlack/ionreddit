@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="primary">
+    <ion-navbar color="reddit">
       <ion-title>
         Reddit
       </ion-title>
@@ -20,7 +20,6 @@
           <ion-option value="music">Music</ion-option>
           <ion-option value="gaming">Gaming</ion-option>
           <ion-option value="art">Art</ion-option>
-          <ion-option value="jokes">Jokes</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
@@ -31,7 +30,7 @@
         </ion-thumbnail>
         <h2>
           {{item.data.title}}
-          <p>
+          <p style="margin-top: 10px;">
             <ion-icon name="thumbs-up">
               {{item.data.score}}
             </ion-icon>&nbsp;&nbsp;
@@ -39,7 +38,7 @@
                 {{item.data.num_comments}}
               </ion-icon>
           </p>
-          <button ion-button clear item-right (click)="viewItem(item.data)">View</button>
+          <button ion-button round outline item-right (click)="viewItem(item.data)" color="reddit">View</button>
         </h2>
       </ion-item>
     </ion-list>
