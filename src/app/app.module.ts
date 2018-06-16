@@ -1,11 +1,12 @@
+import { HttpModule } from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-// import { AboutPage } from '../pages/about/about';
-// import { ContactPage } from '../pages/contact/contact';
-// import { HomePage } from '../pages/home/home';
+
+
 
 import { RedditPage } from '../pages/reddit/reddit';
 import { SettingsPage } from '../pages/settings/settings';
@@ -26,9 +27,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
-  bootstrap: [IonicApp],
+  bootstrap: [
+    IonicApp,
+  ],
   entryComponents: [
     MyApp,
     RedditPage,
@@ -40,6 +45,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
 })
 export class AppModule {}
