@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="primary">
+    <ion-navbar color="reddit">
         <ion-title>
             {{item.title}}
         </ion-title>
@@ -35,7 +35,9 @@
                     </ion-note>
                 </ion-item>
             </ion-list>
-            <a ion-button block target="_blank" href="http://reddit.com/{{item.permalink}}">VIEW ON REDDIT</a>
+            <a ion-button block target="_blank" href="http://reddit.com/{{item.permalink}}" color="reddit">
+                <ion-icon name="search"></ion-icon>&nbsp;VIEW ON REDDIT
+            </a>
         </ion-card-content>
         </ion-card>
 </ion-content> 
