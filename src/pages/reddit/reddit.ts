@@ -47,6 +47,7 @@ export class RedditPage {
 
   changeCategory(){
     this.getPosts(this.category, this.limit);
+    // console.log("Option changed");
   }
 
 }
