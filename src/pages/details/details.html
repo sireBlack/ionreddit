@@ -7,7 +7,7 @@
 </ion-header>
 <ion-content padding>
     <ion-card>
-        <img src="{{item.preview.images[0].source.url}}" onerror="this.src='../../assets/imgs/placeholder.png'"/>
+        <img src="{{item.preview.images[0].source.url || '../../assets/imgs/placeholder.png'}}" onerror="src='../../assets/imgs/placeholder.png'"/>
         <ion-card-content>
             <ion-card-title>
             {{item.title}}
